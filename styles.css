@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #00d255;
+    font-family: 'Pretendard', 'Noto Sans KR', 'NexonLv2Gothic','Apple SD Gothic Neo', 'Malgun Gothic','Nanum Gothic', 'Noto Sans','sans-serif';
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #00d255;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-menu a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-open {
+    background-color: #000000;
+    color: #00d255;
+    border: 2px solid #00d255;
+}
+
+.btn-open:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.btn-plan {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-plan:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #00d255;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    gap: 30px;
+}
+
+.hero-video {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-title {
+    text-align: center;
+    color: #000000;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .header-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
