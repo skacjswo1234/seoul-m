@@ -711,3 +711,39 @@ body {
 .mobile-menu-open {
     overflow: hidden;
 }
+
+/* Floating KakaoTalk Button */
+.floating-kakao {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #FEE500; /* Kakao Yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1100;
+}
+
+.floating-kakao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 768px) {
+    .floating-kakao {
+        right: 14px;
+        bottom: 14px;
+        width: 56px;
+        height: 56px;
+    }
+    .floating-kakao svg {
+        width: 24px;
+        height: 24px;
+    }
+}
