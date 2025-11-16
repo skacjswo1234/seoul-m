@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -26,28 +25,24 @@
                     <a href="#open" class="btn btn-open">즉시개통하기</a>
                     <a href="#plan" class="btn btn-plan">요금제고르기</a>
                 </div>
-                <button class="menu-toggle" aria-label="메뉴 열기">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="nav-toggle" aria-label="메뉴 열기">
+                    ☰
                 </button>
             </nav>
-            <div class="sidebar-overlay"></div>
-            <div class="sidebar-menu">
-                <button class="sidebar-close" aria-label="메뉴 닫기">×</button>
-                <ul class="sidebar-nav-menu">
-                    <li><a href="#self-open">셀프개통 방법</a></li>
-                    <li><a href="#plans">엔텔레콤 요금제</a></li>
-                    <li><a href="#usim">유심구매</a></li>
-                    <li><a href="#board">게시판</a></li>
-                </ul>
-                <div class="sidebar-buttons">
-                    <a href="#open" class="btn btn-open">즉시개통하기</a>
-                    <a href="#plan" class="btn btn-plan">요금제고르기</a>
-                </div>
-            </div>
         </div>
     </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <button class="mobile-menu-close" aria-label="메뉴 닫기">×</button>
+            <ul>
+                <li><a href="#self-open">셀프개통 방법</a></li>
+                <li><a href="#plans">엔텔레콤 요금제</a></li>
+                <li><a href="#usim">유심구매</a></li>
+                <li><a href="#board">게시판</a></li>
+            </ul>
+        </div>
+    </div>
 
     <main class="hero">
         <div class="container">
@@ -148,5 +143,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            document.body.classList.add('mobile-menu-open');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            document.body.classList.remove('mobile-menu-open');
+        }
+
+        if (navToggle && mobileMenu && mobileMenuClose) {
+            navToggle.addEventListener('click', openMobileMenu);
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    closeMobileMenu();
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
+    </script>
 </body>
 </html>
