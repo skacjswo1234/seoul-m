@@ -124,6 +124,8 @@ body {
     background-color: #000000;
     color: #00d255;
     border: 2px solid #00d255;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .btn-open:hover {
@@ -353,6 +355,14 @@ body {
     font-weight: 700;
 }
 
+/* Responsive text toggles */
+.only-mobile {
+    display: none;
+}
+.only-desktop {
+    display: inline;
+}
+
 @keyframes float-icon {
     0% {
         transform: translateY(0);
@@ -477,6 +487,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .only-mobile {
+        display: inline;
+    }
+    .only-desktop {
+        display: none;
+    }
     .nav {
         flex-direction: row;
         align-items: center;
@@ -488,9 +504,7 @@ body {
     }
 
     .nav-menu {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
+        display: none;
     }
 
     .header-buttons {
@@ -515,41 +529,66 @@ body {
     }
 
     .hero-title {
-        font-size: 18px;
+        font-size: 16px;
         white-space: normal;
+        text-align: left;
+        padding-left: 16px;
+    }
+    
+    .hero-title-green {
+        display: block;
+        margin-top: 6px;
+        text-align: center;
+        padding-left: 0;
     }
 
     .hero-video {
         max-width: 100%;
-        max-height: 180px;
+        max-height: 260px;
     }
 
     .button-group {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        gap: 8px;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .cert-button {
+        padding: 18px 10px;
+        border-radius: 12px;
+        min-width: 0;
+        flex: 1 1 0;
+        min-height: 170px;
     }
 
     .cert-title {
-        font-size: 28px;
+        font-size: 18px;
     }
 
     .cert-subtitle,
     .cert-desc {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .card-section {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+        padding: 0;
+        justify-content: center;
     }
 
     .card-item {
-        padding: 10px;
-        min-height: 140px;
+        padding: 7px;
+        min-height: 110px;
+        flex: 0 0 20%;
+        max-width: 20%;
+        min-width: 0;
     }
 
     .card-item img {
-        max-width: 120px;
+        max-width: 62px;
     }
 
     .card-text a {
