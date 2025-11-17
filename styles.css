@@ -536,6 +536,11 @@ body {
 @media (max-width: 768px) {
     .hero {
         padding: 0; /* 헤더 아래 여백 제거 */
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
     .foot-sociallink {
         justify-content: center;
@@ -765,9 +770,14 @@ body {
 
     .hero .container {
         padding: 0;
+        padding-left: 0;
+        padding-right: 0;
         border-radius: 0;
         max-width: 100%;
         gap: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
 
     .hero-title {
@@ -791,6 +801,11 @@ body {
         max-width: 100%;
         width: 100%;
         border-radius: 0;
+        object-fit: cover;
+        height: auto;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .button-group {
