@@ -406,6 +406,86 @@ body {
     font-weight: 400;
 }
 
+/* Usim Intro Section */
+.usim-intro-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.usim-intro-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 16px;
+}
+
+.usim-intro-title {
+    color: #ff69b4;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.usim-intro-subtitle {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    line-height: 1.5;
+}
+
+.usim-intro-description {
+    color: #ff69b4;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Usim Method Section */
+.usim-method-section {
+    display: none;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.usim-method-cards {
+    display: flex;
+    width: 100%;
+    gap: 0;
+}
+
+.usim-method-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 1px solid #d0d0d0;
+    background: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.usim-method-card:first-child {
+    border-right: 1px solid #d0d0d0;
+}
+
+.usim-method-card:hover {
+    background-color: #f5f5f5;
+}
+
+.usim-method-text {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
 
 .price-cards-container {
     display: flex;
@@ -799,44 +879,37 @@ body {
 ._sns_link_list {
     display: flex;
     gap: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 .sns-btn {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: #000000; /* outer ring - brand black */
+    background: transparent;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     text-decoration: none;
-    overflow: visible;
-}
-
-.sns-btn::before {
-    content: "";
-    position: absolute;
-    inset: 2px; /* thinner ring at smaller size */
-    background: #ffffff; /* inner disk to keep brand icons visible */
-    border-radius: 50%;
-    z-index: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    font-size: 12.0132px;
 }
 
 .sns-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    background: #1a1a1a;
+    opacity: 0.8;
 }
 
 .sns-btn img {
-    position: relative;
-    z-index: 1;
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -857,11 +930,8 @@ body {
         gap: 16px;
     }
     .sns-btn {
-        width: 28px;
-        height: 28px;
-    }
-    .sns-btn::before {
-        inset: 3px;
+        width: 18px;
+        height: 18px;
     }
 }
 .social-btn img {
@@ -952,6 +1022,12 @@ body {
     height: 40px;
     width: auto;
     flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .hours-logo {
+        height: 55px;
+    }
 }
 
 .hours-info p {
@@ -1114,6 +1190,7 @@ body {
     .hero-title-wrapper {
         padding: 0 16px;
         text-align: left;
+        margin-top: 24px;
     }
     .hero-title-blue {
         font-size: 18px;
@@ -1248,6 +1325,11 @@ body {
         border-radius: 0;
         width: 100%;
         max-width: 100%;
+        justify-content: center;
+    }
+    
+    .hours-info p {
+        text-align: center;
     }
     
     .cta-section {
@@ -1269,6 +1351,7 @@ body {
         font-size: 14px;
         flex: 1;
         min-width: 0;
+        max-width: 48%;
     }
     
     .links-section {
@@ -1361,6 +1444,80 @@ body {
     
     .price-info-text {
         font-size: 14px;
+    }
+    
+    .usim-intro-section {
+        padding: 0 16px;
+        text-align: left;
+        margin: 20px auto;
+    }
+    
+    .usim-intro-title-wrapper {
+        margin: 16px 0 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .usim-intro-title {
+        font-size: 20px;
+        text-align: left;
+        margin: 0;
+        flex: 1;
+    }
+    
+    .usim-intro-section .back-btn {
+        color: #ff69b4;
+        margin-left: 12px;
+        margin-right: 0;
+    }
+    
+    .usim-intro-subtitle {
+        font-size: 22px;
+        text-align: left;
+        margin: 0 0 12px;
+    }
+    
+    .usim-intro-description {
+        font-size: 20px;
+        text-align: left;
+        margin: 0;
+    }
+    
+    .usim-intro-subtitle-small {
+        font-size: 22px;
+    }
+    
+    .usim-intro-description-small {
+        font-size: 20px;
+    }
+    
+    .usim-method-section {
+        display: block;
+        margin: 20px 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .usim-method-cards {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .usim-method-card {
+        border-radius: 0;
+        border-left: none;
+        border-right: 1px solid #d0d0d0;
+        border-top: 1px solid #d0d0d0;
+        border-bottom: 1px solid #d0d0d0;
+    }
+    
+    .usim-method-card:first-child {
+        border-left: none;
+    }
+    
+    .usim-method-card:last-child {
+        border-right: none;
     }
 }
 
