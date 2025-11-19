@@ -459,7 +459,7 @@ body {
 
 /* Usim Method Section */
 .usim-method-section {
-    display: none;
+    display: block;
     width: 100%;
     margin: 20px 0;
 }
@@ -518,6 +518,13 @@ body {
     vertical-align: middle;
 }
 
+.usim-method-warning-text {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 .usim-rectangle {
     width: 100%;
     height: 10px;
@@ -528,22 +535,29 @@ body {
 
 .usim-lg-desc {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 5px;
     gap: 10px;
     line-height: 1.4;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
 }
 
 .usim-lg-desc-left {
-    text-align: left;
+    text-align: center;
     flex: 1;
+    font-size: 28px;
 }
 
 .usim-lg-desc-right {
-    text-align: right;
+    text-align: center;
     flex: 1;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .text-hotpink {
@@ -551,9 +565,55 @@ body {
     font-weight: 700;
 }
 
+.text-red {
+    color: #ff0000;
+    font-weight: 700;
+}
+
 .text-black {
     color: #000000;
     font-weight: 700;
+}
+
+/* Usim LG Images Section */
+.usim-lg-images {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 0 20px;
+}
+
+.usim-lg-images-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.usim-lg-image-card {
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usim-lg-left-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.usim-lg-image-right {
+    flex: 0 0 auto;
+}
+
+.usim-lg-right-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .price-cards-container {
@@ -1028,6 +1088,32 @@ body {
         width: 18px;
         height: 18px;
     }
+
+    .usim-lg-desc {
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: -10px;
+    }
+
+    .usim-lg-desc-left {
+        text-align: left;
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .usim-lg-desc-right {
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .usim-lg-images-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usim-lg-images {
+        margin: 0px auto;
+    }
 }
 
 .social-btn img {
@@ -1183,6 +1269,14 @@ body {
 .cta-blue:hover {
     background-color: #0052cc;
     border-color: #0052cc;
+}
+
+.links-section {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 .link-cards {
@@ -1482,11 +1576,16 @@ body {
     }
 
     .cta-btn {
-        padding: 16px 24px;
-        font-size: 14px;
+        padding: 18px 28px;
+        font-size: 15px;
         flex: 1;
         min-width: 0;
         max-width: 48%;
+        white-space: nowrap;
+    }
+
+    .cta-btn-wide {
+        white-space: nowrap;
     }
 
     .links-section {

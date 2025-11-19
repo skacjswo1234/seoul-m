@@ -20,13 +20,13 @@
                 </a>
                 <ul class="nav-menu">
                     <li><a href="#self-open">셀프개통 방법</a></li>
-                    <li><a href="#plans">엔텔레콤 요금제</a></li>
-                    <li><a href="#usim">유심구매</a></li>
+                    <li><a href="price-0.html">엔텔레콤 요금제</a></li>
+                    <li><a href="usim-0.html">유심구매</a></li>
                     <li><a href="#board">게시판</a></li>
                 </ul>
                 <div class="header-buttons">
-                    <a href="#open" class="btn btn-open">즉시개통하기</a>
-                    <a href="#plan" class="btn btn-plan">요금제고르기</a>
+                    <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" class="btn btn-open">즉시개통하기</a>
+                    <a href="price-0.html" class="btn btn-plan">요금제고르기</a>
                 </div>
                 <button class="nav-toggle" aria-label="메뉴 열기">
                     ☰
@@ -44,8 +44,8 @@
             </div>
             <ul>
                 <li><a href="#self-open">셀프개통 방법</a></li>
-                <li><a href="#plans">엔텔레콤 요금제</a></li>
-                <li><a href="#usim">유심구매</a></li>
+                <li><a href="price-0.html">엔텔레콤 요금제</a></li>
+                <li><a href="usim-0.html">유심구매</a></li>
                 <li><a href="#board">게시판</a></li>
             </ul>
         </div>
@@ -53,8 +53,11 @@
 
     <main class="hero">
         <div class="container">
-            <!-- 유심 구매 방법 카드 섹션: 모바일 전용 -->
-            <section class="usim-method-section only-mobile" aria-label="유심 구매 방법">
+            <div class="only-mobile" style="margin-bottom: 20px;">
+                <a href="usim-0.html" class="back-btn">←</a>
+            </div>
+            <!-- 유심 구매 방법 카드 섹션 -->
+            <section class="usim-method-section" aria-label="유심 구매 방법">
                 <div class="usim-method-cards">
                     <a href="usim-lg.html" class="usim-method-card">
                         <span class="usim-method-text">LG 유심 구매방법</span>
@@ -64,15 +67,39 @@
                     </a>
                 </div>
                 <div class="usim-rectangle"></div>
-                <p class="usim-method-warning">
-                    <img src="images/wrong.png" alt="" class="usim-method-warning-icon">
-                </p>
+                <div class="usim-lg-desc">
+                    <div class="usim-lg-desc-left">
+                        <span class="text-red">KT</span>와 호환되는 <span class="text-black">유심은</span><br>
+                        <span class="text-red">바로유심</span><span class="text-black">입니다.</span>
+                    </div>
+                    <div class="usim-lg-desc-right">
+                        <span class="text-red">KT망</span>을 사용하는 <span class="text-black">모든(알뜰폰)요금제를</span><br>
+                        <span class="text-black">개통할 수 있는 국내 최초</span> <span class="text-red">통합공용유심!</span><br>
+                        <span class="text-black">(교통카드/결제기능 지원 NFC유심)</span>
+                    </div>
+                </div>
+            </section>
+            <!-- 이미지 섹션 -->
+            <section class="usim-lg-images" aria-label="KT 유심 이미지">
+                <div class="usim-lg-images-container">
+                    <div class="usim-lg-image-card">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="images/usim-kt-left-m.png">
+                            <img src="images/usim-kt-left.png" alt="KT 유심 좌측" class="usim-lg-left-img">
+                        </picture>
+                    </div>
+                    <div class="usim-lg-image-card">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="images/usim-kt-right-m.png">
+                            <img src="images/usim-kt-right.png" alt="KT 유심 우측" class="usim-lg-right-img">
+                        </picture>
+                    </div>
+                </div>
             </section>
             <!-- 링크 카드 섹션: 버튼 아래, 모바일 전용 -->
             <section class="links-section only-mobile" aria-label="바로가기 링크">
                 <div class="link-cards">
-                    <a class="link-card" href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx"
-                        target="_blank" rel="noopener">
+                    <a class="link-card" href="price-0.html">
                         <span class="link-card-line">내게 맞는</span>
                         <span class="link-card-line">요금제 찾기</span>
                     </a>
