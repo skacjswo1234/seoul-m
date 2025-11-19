@@ -1097,7 +1097,7 @@ body {
 
     .usim-lg-desc-left {
         text-align: left;
-        font-size: 18px;
+        font-size: 14px;
         padding-left: 20px;
     }
 
@@ -1113,6 +1113,14 @@ body {
 
     .usim-lg-images {
         margin: 0px auto;
+    }
+
+    .usim-lg-page .back-btn {
+        color: #ff69b4;
+    }
+
+    .usim-kt-page .back-btn {
+        color: #ff0000;
     }
 }
 
