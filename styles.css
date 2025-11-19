@@ -1096,14 +1096,17 @@ body {
     }
 
     .usim-lg-desc-left {
-        text-align: left;
+        text-align: left !important;
         font-size: 14px;
         padding-left: 20px;
+        align-self: flex-start;
+        line-height: 1.6;
     }
 
     .usim-lg-desc-right {
         text-align: right;
         font-size: 10px;
+        padding-right: 20px;
     }
 
     .usim-lg-images-container {
