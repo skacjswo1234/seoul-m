@@ -263,6 +263,8 @@ body {
     /* for bottom-fixed CTA */
     padding-bottom: 36px;
     /* space for bottom CTA */
+    text-decoration: none;
+    color: inherit;
 }
 
 .cert-button-yes {
@@ -490,6 +492,10 @@ body {
     background-color: #f5f5f5;
 }
 
+.usim-method-card.active {
+    background-color: #e0e0e0;
+}
+
 .usim-method-text {
     color: #000000;
     font-size: 16px;
@@ -507,15 +513,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .usim-method-warning-icon {
     width: auto;
-    height: 1.8em;
+    height: 1.5em;
+    max-height: 21px;
     display: inline-block;
     flex-shrink: 0;
     vertical-align: middle;
+    object-fit: contain;
 }
 
 .usim-method-warning-text {
@@ -523,6 +531,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
 }
 
 .usim-rectangle {
@@ -815,10 +825,17 @@ body {
 /* Card Section */
 .card-section {
     display: flex;
+    flex-direction: row;
     gap: 8px;
     width: 100%;
     max-width: 1000px;
     margin-top: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-section.only-desktop {
+    display: flex;
 }
 
 .card-item {
@@ -1359,7 +1376,11 @@ body {
     }
 
     .only-desktop {
-        display: none;
+        display: none !important;
+    }
+
+    .card-section.only-desktop {
+        display: none !important;
     }
 
     .intro-mobile {
@@ -1380,6 +1401,10 @@ body {
         flex-direction: row;
         align-items: center;
         gap: 0;
+    }
+
+    .logo {
+        margin-right: auto;
     }
 
     .logo img {
@@ -1515,6 +1540,14 @@ body {
         justify-content: flex-start;
     }
 
+    .card-section.only-desktop {
+        display: none !important;
+    }
+
+    .index-2-page .card-section {
+        display: none;
+    }
+
     .card-item {
         padding: 0;
         /* no inner gap */
@@ -1577,15 +1610,15 @@ body {
 
     .hours-info {
         margin: 10px 0 6px;
-        padding: 12px 0;
+        padding: 12px 16px;
         border-radius: 0;
         width: 100%;
         max-width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hours-info p {
-        text-align: center;
+        text-align: left;
     }
 
     .cta-section {
@@ -1596,18 +1629,18 @@ body {
 
     .cta-row {
         margin: 8px 0 10px;
-        padding: 0 0;
-        gap: 6px;
+        padding: 0 16px;
+        gap: 8px;
         width: 100%;
         max-width: 100%;
     }
 
     .cta-btn {
-        padding: 18px 28px;
-        font-size: 15px;
+        padding: 18px 20px;
+        font-size: 13px;
         flex: 1;
         min-width: 0;
-        max-width: 48%;
+        max-width: none;
         white-space: nowrap;
     }
 
@@ -1782,7 +1815,8 @@ body {
     }
 
     .usim-method-warning-icon {
-        height: 4.4em;
+        height: 1.5em;
+        max-height: 21px;
     }
 }
 
