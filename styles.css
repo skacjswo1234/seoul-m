@@ -1815,8 +1815,10 @@ body {
     }
 
     .usim-method-warning-icon {
-        height: 1.5em;
-        max-height: 21px;
+        height: 16px;
+        max-height: none;
+        width: auto;
+        vertical-align: middle;
     }
 }
 
