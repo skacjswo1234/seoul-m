@@ -63,7 +63,7 @@
                 <a href="index-3.html" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨 없어요</span></p>
                     <p class="cert-subtitle">앤텔레콤은 한번도 안써봤어요</p>
-                    <p class="cert-cta-right">비대면 개통진행</p>
+                    <p class="cert-cta-right"><span class="self-open-link-inline" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" style="text-decoration: underline; cursor: pointer;">비대면 개통진행</span></p>
                 </a>
             </div>
             <div class="card-section">
@@ -73,7 +73,7 @@
                     </a>
                     <div class="card-text">
                         <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">
-                            <strong><span class="only-desktop">유심있다면 즉시개통하기</span><span class="only-mobile">개통하기</span></strong>
+                            <strong><span class="only-desktop">유심이있다면 즉시개통</span><span class="only-mobile">개통하기</span></strong>
                         </a>
                     </div>
                 </div>
@@ -110,19 +110,15 @@
             </div>
             <div style="width: 100%; max-width: 1000px; padding: 20px; text-align: center;">
                 <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener" class="btn btn-open" style="display: inline-block; padding: 15px 40px; font-size: 16px;">
-                    유심이있다면 즉시개통하기
+                    유심이있다면 즉시개통
                 </a>
             </div>
             <!-- 링크 카드 섹션: 버튼 아래, 모바일 전용 -->
             <section class="links-section only-mobile" aria-label="바로가기 링크">
-                <div class="link-cards">
+                <div class="link-cards" style="grid-template-columns: repeat(2, 1fr);">
                     <a class="link-card" href="price-0.html">
                         <span class="link-card-line">내게 맞는</span>
                         <span class="link-card-line">요금제 찾기</span>
-                    </a>
-                    <a class="link-card" href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener">
-                        <span class="link-card-line">유심있다면</span>
-                        <span class="link-card-line">즉시개통하기</span>
                     </a>
                     <a class="link-card" href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener">
                         <span class="link-card-line">카톡</span>
@@ -188,6 +184,16 @@
             });
             mobileMenu.querySelectorAll('a').forEach((link) => {
                 link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        // 비대면 개통진행 링크 처리
+        const selfOpenLinkInline = document.querySelector('.self-open-link-inline');
+        if (selfOpenLinkInline) {
+            selfOpenLinkInline.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
             });
         }
     </script>

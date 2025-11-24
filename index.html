@@ -62,7 +62,7 @@
                     <p><span class="cert-title">네, 있어요</span></p>
                     <p class="cert-list">카카오 / 토스 / PAYCO / PASS</p>
                     <p class="cert-list-indent">국민 / 신한 / 삼성월렛 / 네이버</p>
-                    <p class="cert-cta-right">셀프 개통 진행</p>
+                    <p class="cert-cta-right">셀프 <span class="self-open-link-inline" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" style="text-decoration: underline; cursor: pointer;">개통진행하기</span></p>
                 </a>
                 <a href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨 없어요</span></p>
@@ -77,7 +77,7 @@
                     </a>
                     <div class="card-text">
                         <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">
-                            <strong><span class="only-desktop">유심있다면 즉시개통하기</span><span class="only-mobile">개통하기</span></strong>
+                            <strong><span class="only-desktop">유심이있다면 즉시개통</span><span class="only-mobile">개통하기</span></strong>
                         </a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
             <section class="hours-section only-mobile" aria-label="운영시간 안내">
                 <div class="hours-info">
                     <img src="images/s-mobile.png" alt="서울모바일" class="hours-logo">
-                    <p>운영시간 | 월요일-일요일 08:00 - 21:50<br>공휴일, 연휴, 명절에도<br>개통됩니다.</p>
+                    <p>운영시간 | 월요일-일요일 08:00 - 21:50<br> 공휴일, 연휴, 명절에도 개통됩니다.</p>
                 </div>
             </section>
             <!-- 상담 버튼 섹션 (모바일 전용) - 운영시간 바로 아래 -->
@@ -143,8 +143,8 @@
                         <span class="link-card-line">요금제 찾기</span>
                     </a>
                     <a class="link-card" href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener">
-                        <span class="link-card-line">유심있다면</span>
-                        <span class="link-card-line">즉시개통하기</span>
+                        <span class="link-card-line">유심이있다면</span>
+                        <span class="link-card-line">즉시개통</span>
                     </a>
                     <a class="link-card" href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener">
                         <span class="link-card-line">카톡</span>
@@ -210,6 +210,16 @@
             });
             mobileMenu.querySelectorAll('a').forEach((link) => {
                 link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        // 셀프개통진행하기 링크 처리
+        const selfOpenLinkInline = document.querySelector('.self-open-link-inline');
+        if (selfOpenLinkInline) {
+            selfOpenLinkInline.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
             });
         }
     </script>
