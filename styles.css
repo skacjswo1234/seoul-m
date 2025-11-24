@@ -274,6 +274,7 @@ body {
 
 .cert-button-yes:hover {
     background-color: #00d255;
+    border: 2px solid transparent;
     transform: translateY(-2px);
 }
 
@@ -316,6 +317,11 @@ body {
     font-size: 14px;
     color: #ffffff;
     text-align: right;
+}
+
+.self-open-link {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .cert-title {
@@ -668,6 +674,37 @@ body {
     max-width: 500px;
     flex: 1;
     min-width: 300px;
+    opacity: 0;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .price-info-title {

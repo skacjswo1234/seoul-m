@@ -59,7 +59,7 @@
                     <p><span class="cert-title">네, 구매했어요.</span></p>
                     <p class="cert-subtitle">앤텔레콤 호환유심</p>
                     <p class="cert-subtitle">구매완료입니다.</p>
-                    <p class="cert-cta-right">셀프개통진행하기</p>
+                    <span class="cert-cta-right self-open-link" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">셀프개통진행하기</span>
                 </a>
                 <a href="usim-0.html" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨.</span></p>
@@ -67,21 +67,8 @@
                     <p class="cert-subtitle">유심은 어떤걸로 구매하면 될까요?</p>
                 </a>
             </div>
-            <div class="usim-method-warning only-mobile" style="margin-top: 20px; margin-bottom: 20px;">
-                <img src="images/wrong2.png" alt="" class="usim-method-warning-icon">
-                <span class="usim-method-warning-text">전구 호환유심을 확인해주세요 KT 바로유심</span>
-            </div>
+            
             <div class="card-section only-desktop">
-                <div class="card-item">
-                    <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">
-                        <img src="images/c-1.png" alt="카드 이미지">
-                    </a>
-                    <div class="card-text">
-                        <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">
-                            <strong><span class="only-desktop">유심있다면 즉시개통하기</span><span class="only-mobile">개통하기</span></strong>
-                        </a>
-                    </div>
-                </div>
                 <div class="card-item">
                     <a href="price-0.html">
                         <img src="images/c-2.png" alt="카드 이미지">
@@ -115,14 +102,10 @@
             </div>
             <!-- 링크 카드 섹션: 버튼 아래, 모바일 전용 -->
             <section class="links-section only-mobile" aria-label="바로가기 링크">
-                <div class="link-cards">
+                <div class="link-cards" style="grid-template-columns: repeat(2, 1fr);">
                     <a class="link-card" href="price-0.html">
                         <span class="link-card-line">내게 맞는</span>
                         <span class="link-card-line">요금제 찾기</span>
-                    </a>
-                    <a class="link-card" href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener">
-                        <span class="link-card-line">유심있다면</span>
-                        <span class="link-card-line">즉시개통하기</span>
                     </a>
                     <a class="link-card" href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener">
                         <span class="link-card-line">카톡</span>
@@ -130,6 +113,11 @@
                     </a>
                 </div>
             </section>
+            <div style="width: 100%; max-width: 1000px; padding: 20px; text-align: center;">
+                <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener" class="btn btn-open" style="display: inline-block; padding: 15px 40px; font-size: 16px;">
+                    유심이있다면 즉시개통하기
+                </a>
+            </div>
             <div class="hero-footer">
                 <div class="foot-sociallink _sns_link">
                     <div class="btn-group _sns_link_list" role="group">
@@ -188,6 +176,16 @@
             });
             mobileMenu.querySelectorAll('a').forEach((link) => {
                 link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        // 셀프개통진행하기 링크 처리
+        const selfOpenLink = document.querySelector('.self-open-link');
+        if (selfOpenLink) {
+            selfOpenLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
             });
         }
     </script>
