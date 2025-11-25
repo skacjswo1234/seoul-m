@@ -55,11 +55,11 @@
                 <h1 class="hero-title-large">유심 구매 하셨나요?</h1>
             </div>
             <div class="button-group">
-                <a href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener" class="cert-button cert-button-yes">
+                <a href="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" target="_blank" rel="noopener" class="cert-button cert-button-yes">
                     <p><span class="cert-title">네, 구매했어요.</span></p>
                     <p class="cert-subtitle">앤텔레콤 호환유심</p>
                     <p class="cert-subtitle">구매완료입니다.</p>
-                    <span class="cert-cta-right self-open-link" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx">셀프개통진행하기</span>
+                    <p class="cert-cta-right">셀프개통진행하기</p>
                 </a>
                 <a href="usim-0.html" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨.</span></p>
@@ -179,15 +179,6 @@
             });
         }
 
-        // 셀프개통진행하기 링크 처리
-        const selfOpenLink = document.querySelector('.self-open-link');
-        if (selfOpenLink) {
-            selfOpenLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
-            });
-        }
     </script>
 
     <!-- Floating KakaoTalk Button -->

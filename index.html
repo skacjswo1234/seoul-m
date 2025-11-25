@@ -62,7 +62,7 @@
                     <p><span class="cert-title">네, 있어요</span></p>
                     <p class="cert-list">카카오 / 토스 / PAYCO / PASS</p>
                     <p class="cert-list-indent">국민 / 신한 / 삼성월렛 / 네이버</p>
-                    <p class="cert-cta-right">셀프 <span class="self-open-link-inline" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" style="text-decoration: underline; cursor: pointer;">개통진행하기</span></p>
+                    <p class="cert-cta-right">셀프 개통진행하기</p>
                 </a>
                 <a href="http://pf.kakao.com/_xjLxgcn/chat" target="_blank" rel="noopener" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨 없어요</span></p>
@@ -213,15 +213,6 @@
             });
         }
 
-        // 셀프개통진행하기 링크 처리
-        const selfOpenLinkInline = document.querySelector('.self-open-link-inline');
-        if (selfOpenLinkInline) {
-            selfOpenLinkInline.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
-            });
-        }
     </script>
 
     <!-- Floating KakaoTalk Button -->

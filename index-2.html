@@ -63,7 +63,7 @@
                 <a href="index-3.html" class="cert-button cert-button-no">
                     <p><span class="cert-title">아뇨 없어요</span></p>
                     <p class="cert-subtitle">앤텔레콤은 한번도 안써봤어요</p>
-                    <p class="cert-cta-right"><span class="self-open-link-inline" data-url="https://www.n-telecom.co.kr/jmall7/view/open/selfopen_explain.aspx" style="text-decoration: underline; cursor: pointer;">비대면 개통진행</span></p>
+                    <p class="cert-cta-right">비대면 개통진행</p>
                 </a>
             </div>
             <div class="card-section">
@@ -187,15 +187,6 @@
             });
         }
 
-        // 비대면 개통진행 링크 처리
-        const selfOpenLinkInline = document.querySelector('.self-open-link-inline');
-        if (selfOpenLinkInline) {
-            selfOpenLinkInline.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                window.open(this.getAttribute('data-url'), '_blank', 'noopener');
-            });
-        }
     </script>
 
     <!-- Floating KakaoTalk Button -->
