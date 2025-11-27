@@ -249,6 +249,117 @@ body {
     max-width: 1000px;
 }
 
+/* 인증서 개통 버튼 그룹 */
+.cert-auth-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.cert-auth-btn {
+    flex: 1;
+    padding: 15px 24px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cert-auth-btn-single {
+    width: 100%;
+    max-width: 100%;
+}
+
+.cert-auth-btn:hover {
+    border-color: #0066ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+/* 카카오 채널 섹션 */
+.kakao-channel-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kakao-channel-link {
+    display: block;
+    width: 100%;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.kakao-channel-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 방문 정보 섹션 */
+.visit-info-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.visit-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.visit-info-left {
+    flex: 1;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.visit-info-left p {
+    margin: 0;
+}
+
+.visit-info-right {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.visit-info-right p {
+    margin: 0;
+}
+
+.visit-info-right p:first-child {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.highlight-yellow {
+    background-color: #ffeb3b;
+    padding: 2px 4px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 .cert-button {
     flex: 1;
     padding: 15px;
@@ -523,13 +634,12 @@ body {
 }
 
 .usim-method-warning-icon {
-    width: auto;
-    height: 1.5em;
-    max-height: 21px;
+    font-size: 1.5em;
+    line-height: 1;
     display: inline-block;
     flex-shrink: 0;
     vertical-align: middle;
-    object-fit: contain;
+    margin-right: 4px;
 }
 
 .usim-method-warning-text {
@@ -1609,6 +1719,56 @@ body {
         flex-wrap: wrap;
     }
 
+    .cert-auth-buttons {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+        margin-top: 15px;
+    }
+
+    .cert-auth-btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    .kakao-channel-section {
+        margin: 15px auto;
+        padding: 0 16px;
+    }
+
+    .kakao-channel-img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .visit-info-section {
+        margin: 15px auto;
+        padding: 0 16px;
+    }
+
+    .visit-info-container {
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .visit-info-left {
+        font-size: 14px;
+        text-align: left;
+        flex: 1;
+    }
+
+    .visit-info-right {
+        font-size: 10px;
+        text-align: right;
+        flex: 1;
+    }
+
+    .visit-info-right p:first-child {
+        font-size: 11px;
+    }
+
     .cert-button {
         padding: 24px 12px;
         border-radius: 12px;
@@ -1920,9 +2080,8 @@ body {
     }
 
     .usim-method-warning-icon {
-        height: 16px;
-        max-height: none;
-        width: auto;
+        font-size: 1.3em;
+        line-height: 1;
         vertical-align: middle;
     }
 }
