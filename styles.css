@@ -341,7 +341,7 @@ body {
     flex: 1;
     font-size: 15px;
     line-height: 1.6;
-    text-align: right;
+    text-align: center;
 }
 
 .visit-info-right p {
@@ -1761,7 +1761,7 @@ body {
 
     .visit-info-right {
         font-size: 10px;
-        text-align: right;
+        text-align: center;
         flex: 1;
     }
 
