@@ -1463,7 +1463,7 @@ body {
 }
 
 .footer-logo img {
-    max-width: 200px;
+    max-width: 120px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -1901,7 +1901,7 @@ body {
     }
 
     .footer-logo img {
-        max-width: 80px;
+        max-width: 60px;
         /* smaller logo on mobile footer */
     }
 
